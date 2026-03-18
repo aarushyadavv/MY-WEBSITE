@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SRI SANKALN | Order on WhatsApp</title>
+  <style>
+    :root{
+      --bg:#f6f7fb;
+      --card:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --line:#e5e7eb;
+      --brand:#2563eb;
+      --brand2:#16a34a;
+      --okBg:#dcfce7; --okText:#14532d; --okLine:#86efac;
+      --noBg:#fee2e2; --noText:#7f1d1d; --noLine:#fca5a5;
+      --shadow:0 12px 28px rgba(15,23,42,.08);
+    }
+    [data-theme="dark"]{
+      --bg:#0b1220;
+      --card:#0f1a2e;
+      --text:#e5e7eb;
+      --muted:#a3b3c7;
+      --line:#20324f;
+      --brand:#60a5fa;
+      --brand2:#22c55e;
+      --shadow:0 12px 28px rgba(0,0,0,.35);
+      --okBg:rgba(34,197,94,.15); --okText:#86efac; --okLine:rgba(34,197,94,.35);
+      --noBg:rgba(239,68,68,.15); --noText:#fca5a5; --noLine:rgba(239,68,68,.35);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+    a{color:inherit}
+    header{
+      position:sticky;top:0;z-index:10;
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      color:#fff;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.18);
+    }
+    .nav{max-width:1100px;margin:0 auto;display:flex;gap:10px;align-items:center;justify-content:space-between}
+    .logo{
+      font-weight:950;letter-spacing:.14em;text-transform:uppercase;
+      font-size:16px;line-height:1;
+    }
+    .subLogo{font-size:11px;opacity:.92;margin-top:4px}
+    .navRight{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+    .pillBtn{
+      background:rgba(255,255,255,.16);
+      border:1px solid rgba(255,255,255,.22);
+      color:#fff;border-radius:999px;padding:7px 10px;
+      font-size:12px;cursor:pointer;text-decoration:none;
+      display:inline-flex;gap:7px;align-items:center;
+      user-select:none;
+    }
+    .pillBtn:hover{background:rgba(255,255,255,.22)}
+    main{max-width:1100px;margin:14px auto 30px;padding:0 14px}
+    .hero{
+      background:var(--card);border:1px solid var(--line);border-radius:16px;
+      box-shadow:var(--shadow);padding:14px;
+      display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:12px;
+    }
+    @media (max-width:900px){.hero{grid-template-columns:1fr}}
+    .badge{
+      display:inline-flex;gap:8px;align-items:center;
+      background:rgba(37,99,235,.10);
+      border:1px solid var(--line);
+      border-radius:999px;padding:6px 10px;font-size:12px;margin-bottom:10px
+    }
+    h1{font-size:22px;margin:2px 0 8px}
+    .lead{color:var(--muted);font-size:13px}
+    .heroActions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .btn{
+      border-radius:12px;border:1px solid var(--line);
+      padding:9px 12px;background:var(--card);
+      cursor:pointer;text-decoration:none;font-size:13px;
+      display:inline-flex;gap:8px;align-items:center;justify-content:center;
+      user-select:none;
+    }
+    .btn:hover{filter:brightness(0.98)}
+    .btnPrimary{background:var(--brand);border-color:transparent;color:#fff}
+    .btnPrimary:hover{filter:brightness(1.05)}
+    .side{
+      border:1px solid var(--line);border-radius:14px;padding:12px;
+      background:radial-gradient(circle at top, rgba(96,165,250,.16), transparent 60%);
+    }
+    .side h2{font-size:14px;margin-bottom:8px}
+    .kv{font-size:12px;color:var(--muted);display:grid;gap:6px}
+    .kv b{color:var(--text)}
+    .section{margin-top:14px}
+    .sectionTitle{font-size:16px;margin:6px 0 8px}
+    .toolbar{
+      background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px;
+      display:flex;flex-wrap:wrap;gap:10px;align-items:center;
+    }
+    .toolbar input,.toolbar select{
+      border:1px solid var(--line);border-radius:12px;padding:9px 10px;font-size:13px;outline:none;
+      background:var(--card);color:var(--text);
+      min-width:160px;
+    }
+    .rightTools{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    .cartBadge{
+      font-size:12px;border:1px solid var(--line);
+      background:rgba(34,197,94,.10);
+      border-radius:999px;padding:7px 10px;
+    }
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}
+    .card{
+      background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;
+      box-shadow:0 10px 22px rgba(15,23,42,.06);
+      transition:transform .12s ease, box-shadow .12s ease;
+    }
+    [data-theme="dark"] .card{box-shadow:0 10px 22px rgba(0,0,0,.25)}
+    .card:hover{transform:translateY(-1px)}
+    .row1{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}
+    .pName{font-weight:900;font-size:14px}
+    .statusOk{background:var(--okBg);color:var(--okText);border:1px solid var(--okLine);border-radius:999px;padding:4px 8px;font-size:11px;white-space:nowrap}
+    .statusNo{background:var(--noBg);color:var(--noText);border:1px solid var(--noLine);border-radius:999px;padding:4px 8px;font-size:11px;white-space:nowrap}
+    .meta{margin-top:6px;color:var(--muted);font-size:12px}
+    .price{margin-top:8px;font-weight:900;font-size:13px}
+    .mrp{font-size:11px;color:var(--muted);margin-top:2px}
+    .controls{display:flex;gap:8px;margin-top:10px;align-items:center}
+    .addBtn{
+      flex:1;border-radius:12px;border:1px solid var(--line);padding:9px 10px;
+      cursor:pointer;background:var(--brand);color:#fff;font-size:12px;
+      display:flex;align-items:center;justify-content:center;gap:8px;
+      transition:transform .08s ease;
+    }
+    .addBtn:active{transform:scale(.98)}
+    .ghostBtn{
+      flex:1;border-radius:12px;border:1px solid var(--line);padding:9px 10px;
+      cursor:pointer;background:var(--card);color:var(--text);font-size:12px;
+      display:inline-flex;align-items:center;justify-content:center;
+      text-decoration:none;
+      user-select:none;
+    }
+    .qtyPill{
+      border-radius:999px;border:1px solid var(--line);
+      padding:6px 10px;font-size:12px;background:var(--card);white-space:nowrap;
+      user-select:none;
+    }
+    .disabled{opacity:.55;cursor:not-allowed}
+    .loadMoreWrap{display:flex;justify-content:center;margin-top:10px}
+    .small{font-size:11px;color:var(--muted);margin-top:8px;white-space:pre-wrap}
+
+    /* Modal */
+    .modalBackdrop{
+      position:fixed;inset:0;background:rgba(2,6,23,.55);
+      display:none;align-items:center;justify-content:center;padding:16px;z-index:999;
+    }
+    .modal{
+      width:min(560px, 100%);
+      background:var(--card);color:var(--text);
+      border:1px solid var(--line);border-radius:16px;
+      box-shadow:var(--shadow);padding:14px;
+    }
+    .modalTop{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:8px}
+    .modalTop h3{font-size:15px}
+    .xBtn{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:10px;padding:7px 10px;cursor:pointer}
+    .form{display:grid;gap:8px;margin-top:8px}
+    .form label{font-size:12px;color:var(--muted)}
+    .form input,.form textarea{
+      border:1px solid var(--line);border-radius:12px;padding:9px 10px;font-size:13px;outline:none;
+      background:var(--card);color:var(--text);
+    }
+    .form textarea{min-height:80px;resize:vertical}
+    .req{color:#ef4444;font-weight:700}
+    .modalActions{display:flex;gap:10px;margin-top:10px}
+    .modalActions .btn{flex:1}
+
+    /* Map smaller */
+    .mapWrap{border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+    iframe{width:100%;height:220px;border:0;display:block}
+
+    /* Add-to-cart pulse */
+    .pulse{animation:pulse .22s ease}
+    @keyframes pulse{from{transform:scale(1)} 50%{transform:scale(1.03)} to{transform:scale(1)}}
+
+    /* Admin */
+    .adminBox{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px;box-shadow:var(--shadow)}
+    .warn{background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.35);border-radius:14px;padding:10px;font-size:12px;color:var(--text)}
+    .tableWrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+    table{width:100%;border-collapse:collapse;min-width:1100px}
+    th,td{border-bottom:1px solid var(--line);padding:10px;text-align:left;font-size:12px;vertical-align:top}
+    th{background:rgba(148,163,184,.12);position:sticky;top:0}
+    td input, td select{min-width:140px}
+    .tdTiny input{min-width:90px}
+    .tdWide input{min-width:280px}
+    .rowBtns{display:flex;gap:8px;flex-wrap:wrap}
+    .danger{background:#ef4444;color:#fff;border-color:transparent}
+    .danger:hover{filter:brightness(1.05)}
+
+    footer{max-width:1100px;margin:18px auto 26px;padding:0 14px;color:var(--muted);font-size:11px;text-align:center}
+
+    @media (max-width:520px){
+      .toolbar input,.toolbar select{min-width:100%}
+      .rightTools{margin-left:0;width:100%}
+      .rightTools .btn{flex:1}
+    }
+
+    /* Hide admin entry for customers */
+    #adminNav{display:none}
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <div>
+        <div class="logo" id="brandTitle">SRI SANKALN</div>
+        <div class="subLogo" id="brandSubtitle">Sri Sri Tattva Products + Ayurvedic Supply | Patna</div>
+      </div>
+      <div class="navRight">
+        <button class="pillBtn" id="langBtn" type="button">EN</button>
+        <button class="pillBtn" id="themeBtn" type="button">Light</button>
+        <a class="pillBtn" href="#shop" id="navProducts">Products</a>
+        <a class="pillBtn" href="#enquiry" id="navEnquiry">Enquiry</a>
+        <a class="pillBtn" href="#admin" id="adminNav">Admin</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="badge" id="heroBadge">Simple ordering • Available in green • WhatsApp order</div>
+        <h1 id="heroTitle">Sri Sri Tattva + Ayurvedic Supply</h1>
+        <p class="lead" id="heroLead">
+          Select category, add quantity, and place the order on WhatsApp. Prices/MRP and availability can be updated anytime from Admin (for you).
+        </p>
+        <div class="heroActions">
+          <a class="btn btnPrimary" href="#shop" id="heroBtn1">Browse Products</a>
+          <a class="btn" href="#" id="heroBtn2">Call</a>
+          <a class="btn" href="#" target="_blank" id="heroBtn3">Open Map</a>
+        </div>
+        <div class="small" id="heroSmall">MON–SAT: 10:30 AM – 7:30 PM • Sunday Closed • Patna, Bihar</div>
+      </div>
+
+      <aside class="side">
+        <h2 id="sideTitle">Shop Details</h2>
+        <div class="kv">
+          <div><b id="kvShop">Shop</b>: <span id="kvShopV">SRI SANKALN</span></div>
+          <div><b id="kvOwner">Owner</b>: <span id="kvOwnerV">Balaji</span></div>
+          <div><b id="kvPhone">WhatsApp</b>: <span id="kvPhoneV">7488307988</span></div>
+          <div><b id="kvAddr">Address</b>: <span id="kvAddrV">VISHWAKARMA HOUSE, EAST BORING CANAL ROAD, PATNA, BIHAR - 800001</span></div>
+        </div>
+        <div class="small" id="sideMini">Orders are received on WhatsApp with customer details and quantities.</div>
+      </aside>
+    </section>
+
+    <section class="section" id="shop">
+      <div class="sectionTitle" id="shopTitle">Products</div>
+      <p class="lead" id="shopLead">Use category + search. For large lists, the page loads in parts.</p>
+
+      <div class="toolbar">
+        <input id="search" type="text" placeholder="Search product..." />
+        <select id="category"></select>
+
+        <div class="rightTools">
+          <span class="cartBadge" id="cartBadge">Cart: <b id="cartCount">0</b></span>
+          <button class="btn btnPrimary" id="checkoutBtn" type="button">Checkout</button>
+          <button class="btn" id="clearBtn" type="button">Clear</button>
+        </div>
+      </div>
+
+      <div style="height:10px"></div>
+      <div class="grid" id="productGrid"></div>
+
+      <div class="loadMoreWrap">
+        <button class="btn" id="loadMoreBtn" type="button">Load more</button>
+      </div>
+
+      <div class="small" id="shopTip">Each product card shows selected quantity.</div>
+    </section>
+
+    <section class="section" id="enquiry">
+      <div class="sectionTitle" id="enquiryTitle">Enquiry</div>
+      <div class="card">
+        <p class="lead" id="enquiryLead">Send a general enquiry on WhatsApp (separate from product orders).</p>
+        <div class="controls">
+          <a class="ghostBtn" href="#" id="enquiryBtn">Send Enquiry on WhatsApp</a>
+          <a class="ghostBtn" href="#" id="enquiryCallBtn">Call</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="sectionTitle" id="aboutTitle">About</div>
+      <div class="card">
+        <div class="pName" id="aboutLine1">SRI SANKALN</div>
+        <div class="meta" id="aboutLine2">
+          We supply Sri Sri Tattva products and Ayurvedic items. Inspired by The Art of Living and Sri Sri Ravi Shankar’s vision of wellness.
+        </div>
+        <div class="meta" id="aboutLine3">Owner: Balaji • Patna, Bihar</div>
+      </div>
+    </section>
+
+    <section class="section" id="location">
+      <div class="sectionTitle" id="locTitle">Location</div>
+      <p class="lead" id="locLead">VISHWAKARMA HOUSE, EAST BORING CANAL ROAD, PATNA, BIHAR - 800001</p>
+
+      <div class="card">
+        <div class="controls">
+          <a class="ghostBtn" href="#" target="_blank" id="locBtn1">Open on Google Maps</a>
+          <a class="ghostBtn" href="#" id="locBtn2">Call</a>
+        </div>
+        <div style="height:10px"></div>
+        <div class="mapWrap">
+          <iframe
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=VISHWAKARMA%20HOUSE%2C%20EAST%20BORING%20CANAL%20ROAD%2C%20PATNA%2C%20BIHAR%20800001&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="thankyou" style="display:none">
+      <div class="sectionTitle" id="tyTitle">Thank You</div>
+      <div class="card">
+        <div class="pName" id="tyLine1">Your order has been created.</div>
+        <div class="meta" id="tyLine2">
+          We opened WhatsApp with your order details. Please press “Send” on WhatsApp to confirm.
+        </div>
+        <div class="controls" style="margin-top:10px">
+          <a class="ghostBtn" href="#shop" id="tyBtn1">Back to Products</a>
+          <a class="ghostBtn" href="#enquiry" id="tyBtn2">Send Enquiry</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="admin">
+      <div class="sectionTitle">Admin (Only for owner)</div>
+      <div class="adminBox">
+        <div class="warn">
+          Customers cannot edit products. Admin login is required to see and use editing tools.
+        </div>
+
+        <div style="height:10px"></div>
+
+        <div class="controls" style="flex-wrap:wrap">
+          <button class="btn btnPrimary" id="adminLoginBtn" type="button">Admin Login</button>
+          <button class="btn" id="adminLogoutBtn" type="button" style="display:none">Logout</button>
+          <button class="btn" id="addRowBtn" type="button" style="display:none">+ Add Product</button>
+          <button class="btn btnPrimary" id="saveBtn" type="button" style="display:none">Save</button>
+          <button class="btn danger" id="resetBtn" type="button" style="display:none">Reset Default</button>
+        </div>
+
+        <div id="adminGate" style="margin-top:10px;display:none">
+          <div class="small">Enter admin phone + PIN (no OTP).</div>
+          <div class="controls" style="margin-top:8px;flex-wrap:wrap">
+            <input id="adminPhoneInput" placeholder="Admin phone (example: 7992302796)" />
+            <input id="adminPinInput" placeholder="Admin PIN" />
+            <button class="btn btnPrimary" id="adminGateBtn" type="button">Continue</button>
+          </div>
+        </div>
+
+        <div id="adminArea" style="display:none;margin-top:12px">
+          <div class="sectionTitle" style="margin:0 0 8px" id="adminUsageTitle">Editing / Usage (Admin Only)</div>
+          <div class="small" id="adminUsageText">Future instructions will be written here by you.</div>
+
+          <div style="height:10px"></div>
+
+          <div class="small" style="margin-bottom:8px">
+            Import paste format (each line):
+            <br/>Category  [TAB or 2 spaces]  Product Name  [TAB/2spaces]  Unit/Weight  [TAB/2spaces]  Price  [TAB/2spaces]  MRP(optional)  [TAB/2spaces]  Available(optional yes/no)
+          </div>
+
+          <textarea id="importText" placeholder="Paste import lines or JSON here..."></textarea>
+
+          <div class="controls" style="margin-top:8px;flex-wrap:wrap">
+            <button class="btn" id="importBtn" type="button">Import Paste List</button>
+            <button class="btn" id="exportBtn" type="button">Export JSON (copy)</button>
+            <button class="btn" id="importJsonBtn" type="button">Import JSON</button>
+          </div>
+
+          <div style="height:12px"></div>
+
+          <div class="tableWrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Product Name</th>
+                  <th>Unit/Weight</th>
+                  <th class="tdTiny">Price</th>
+                  <th class="tdTiny">MRP</th>
+                  <th class="tdTiny">Available?</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="adminTbody"></tbody>
+            </table>
+          </div>
+          <div class="small" style="margin-top:10px">
+            Delete product: click <b>Delete</b>. Duplicate: click <b>Duplicate</b>. Then press <b>Save</b>.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> SRI SANKALN. All rights reserved.
+  </footer>
+
+  <!-- Checkout modal -->
+  <div class="modalBackdrop" id="modalBackdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true">
+      <div class="modalTop">
+        <h3 id="checkoutTitle">Checkout</h3>
+        <button class="xBtn" id="closeModalBtn" type="button">Close</button>
+      </div>
+
+      <div class="small" id="checkoutHint">
+        Required: Shop Name, Your Name, Phone. Address optional.
+      </div>
+
+      <form class="form" id="checkoutForm">
+        <div>
+          <label id="lblShopName">Shop Name <span class="req">*</span></label>
+          <input id="custShop" placeholder="Your shop name" required />
+        </div>
+        <div>
+          <label id="lblName">Your Name <span class="req">*</span></label>
+          <input id="custName" placeholder="Your name" required />
+        </div>
+        <div>
+          <label id="lblPhone">Phone Number <span class="req">*</span></label>
+          <input id="custPhone" placeholder="Mobile number" inputmode="tel" required />
+        </div>
+        <div>
+          <label id="lblAddr">Address</label>
+          <textarea id="custAddr" placeholder="Address (optional)"></textarea>
+        </div>
+        <div class="modalActions">
+          <button class="btn" id="reviewBtn" type="button">Review Cart</button>
+          <button class="btn btnPrimary" type="submit" id="sendOrderBtn">Send Order on WhatsApp</button>
+        </div>
+        <div class="small" id="cartPreview"></div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // ================== CONFIG (YOU EDIT HERE) ==================
+    const CONFIG = {
+      WHATSAPP_NUMBER: "917488307988", // 7488307988 (orders go here)
+      SHOP_NAME: "SRI SANKALN",
+      OWNER_NAME: "Balaji",
+      SHOP_ADDRESS: "VISHWAKARMA HOUSE, EAST BORING CANAL ROAD, PATNA, BIHAR - 800001",
+      TIMING_TEXT: "MON–SAT: 10:30 AM – 7:30 PM • Sunday Closed • Patna, Bihar",
+      MAPS_LINK: "https://maps.app.goo.gl/5WAQ7ceUeeGMEztX8?g_st=aw",
+      ABOUT_TEXT:
+        "We supply Sri Sri Tattva products and Ayurvedic items. Inspired by The Art of Living and Sri Sri Ravi Shankar’s vision of wellness.",
+      DEFAULT_LANGUAGE: "en", // "en" or "hi"
+      PAGE_SIZE: 30,
+      ADMIN_PHONE: "7992302796",
+      DEFAULT_ADMIN_PIN: "128604@123",
+      STORAGE_PRODUCTS: "ssk_products_v4",
+      STORAGE_ADMIN: "ssk_admin_v2"
+    };
+
+    // ================== I18N ==================
+    const I18N = {
+      en: {
+        products: "Products",
+        enquiry: "Enquiry",
+        heroBadge: "Simple ordering • Available in green • WhatsApp order",
+        heroTitle: "Sri Sri Tattva + Ayurvedic Supply",
+        heroLead: "Select category, add quantity, and place the order on WhatsApp. Prices/MRP and availability can be updated anytime from Admin (for you).",
+        browse: "Browse Products",
+        openMap: "Open Map",
+        shopLead: "Use category + search. For large lists, the page loads in parts.",
+        loadMore: "Load more",
+        tip: "Each product card shows selected quantity.",
+        checkout: "Checkout",
+        clear: "Clear",
+        reviewCart: "Review Cart",
+        sendOrder: "Send Order on WhatsApp",
+        requiredHint: "Required: Shop Name, Your Name, Phone. Address optional.",
+        lblShop: "Shop Name",
+        lblName: "Your Name",
+        lblPhone: "Phone Number",
+        lblAddr: "Address",
+        about: "About",
+        location: "Location",
+        enquiryLead: "Send a general enquiry on WhatsApp (separate from product orders).",
+        enquiryBtn: "Send Enquiry on WhatsApp",
+        available: "Available",
+        notAvailable: "Not available",
+        add: "Add to cart",
+        ask: "WhatsApp ask",
+        qty: "Qty",
+        cartEmpty: "Cart is empty. Add some products first.",
+        mustFill: "Please fill required fields (Shop Name, Name, Phone).",
+        close: "Close",
+        thankYou: "Thank You",
+        tyLine1: "Your order has been created.",
+        tyLine2: "We opened WhatsApp with your order details. Please press “Send” on WhatsApp to confirm.",
+        tyBtn1: "Back to Products",
+        tyBtn2: "Send Enquiry"
+      },
+      hi: {
+        products: "प्रोडक्ट्स",
+        enquiry: "इंक्वायरी",
+        heroBadge: "आसान ऑर्डर • Available हरा • WhatsApp order",
+        heroTitle: "Sri Sri Tattva + आयुर्वेदिक सप्लाई",
+        heroLead: "Category चुनें, quantity जोड़ें और WhatsApp पर order भेजें। Price/MRP और availability आप Admin से बदल सकते हैं।",
+        browse: "प्रोडक्ट्स देखें",
+        openMap: "मैप खोलें",
+        shopLead: "Category + search use करें। बड़े list के लिए page हिस्सों में load होता है।",
+        loadMore: "और दिखाएँ",
+        tip: "हर card पर selected quantity दिखेगी।",
+        checkout: "ऑर्डर करें",
+        clear: "हटाएँ",
+        reviewCart: "Cart देखें",
+        sendOrder: "WhatsApp पर ऑर्डर भेजें",
+        requiredHint: "Required: Shop Name, Name, Phone. Address optional.",
+        lblShop: "Shop Name",
+        lblName: "Name",
+        lblPhone: "Phone",
+        lblAddr: "Address",
+        about: "About",
+        location: "Location",
+        enquiryLead: "General enquiry WhatsApp पर भेजें (order से अलग)।",
+        enquiryBtn: "WhatsApp पर Enquiry",
+        available: "Available",
+        notAvailable: "Not available",
+        add: "Cart में जोड़ें",
+        ask: "WhatsApp पूछें",
+        qty: "Qty",
+        cartEmpty: "Cart खाली है। पहले products add करें।",
+        mustFill: "Required fields भरें (Shop Name, Name, Phone).",
+        close: "Close",
+        thankYou: "धन्यवाद",
+        tyLine1: "आपका ऑर्डर तैयार हो गया है।",
+        tyLine2: "WhatsApp में आपका ऑर्डर खुल गया है। Confirm करने के लिए WhatsApp पर “Send” दबाएँ।",
+        tyBtn1: "प्रोडक्ट्स पर वापस जाएँ",
+        tyBtn2: "Enquiry भेजें"
+      }
+    };
+
+    // ================== DEFAULT PRODUCTS ==================
+    const DEFAULT_PRODUCTS = [
+      { id: uid(), category: "Food", name: "Sri Sri Products Honey", unit: "250 gm", price: 140, mrp: 160, available: true },
+      { id: uid(), category: "Food", name: "Cow’s Pure Ghee", unit: "1 Liter", price: 450, mrp: 499, available: true },
+    ];
+
+    // ================== STATE ==================
+    let lang = CONFIG.DEFAULT_LANGUAGE;
+    let products = loadProducts();
+    let filtered = [];
+    let shown = 0;
+    const cart = new Map(); // id -> qty
+
+    // ================== HELPERS ==================
+    const $ = (id) => document.getElementById(id);
+    function uid(){ return "p_" + Math.random().toString(36).slice(2,10) + Date.now().toString(36); }
+    function escapeHtml(str){
+      return (str ?? "").toString()
+        .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;").replace(/'/g,"&#039;");
+    }
+    function waLink(message){
+      return `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    }
+    function fmtMoney(n){
+      const num = Number(n);
+      if (!Number.isFinite(num) || num <= 0) return "";
+      return `₹${num}`;
+    }
+    function t(key){ return (I18N[lang] && I18N[lang][key]) || I18N.en[key] || key; }
+
+    // ================== LOAD/SAVE ==================
+    function loadProducts(){
+      try{
+        const raw = localStorage.getItem(CONFIG.STORAGE_PRODUCTS);
+        if (!raw) return structuredClone(DEFAULT_PRODUCTS);
+        const arr = JSON.parse(raw);
+        if (!Array.isArray(arr)) return structuredClone(DEFAULT_PRODUCTS);
+        return arr.map(p => ({
+          id: String(p.id || uid()),
+          category: String(p.category || "Other").trim() || "Other",
+          name: String(p.name || "").trim(),
+          unit: String(p.unit || "").trim(),
+          price: Number(p.price) || 0,
+          mrp: Number(p.mrp) || 0,
+          available: Boolean(p.available),
+        })).filter(p => p.name);
+      }catch{
+        return structuredClone(DEFAULT_PRODUCTS);
+      }
+    }
+    function saveProducts(){
+      localStorage.setItem(CONFIG.STORAGE_PRODUCTS, JSON.stringify(products));
+    }
+
+    // ================== TEXT APPLY ==================
+    function applyText(){
+      $("navProducts").textContent = t("products");
+      $("navEnquiry").textContent = t("enquiry");
+
+      $("heroBadge").textContent = t("heroBadge");
+      $("heroTitle").textContent = t("heroTitle");
+      $("heroLead").textContent = t("heroLead");
+      $("heroBtn1").textContent = t("browse");
+      $("heroBtn3").textContent = t("openMap");
+      $("heroSmall").textContent = CONFIG.TIMING_TEXT;
+
+      $("shopTitle").textContent = t("products");
+      $("shopLead").textContent = t("shopLead");
+      $("loadMoreBtn").textContent = t("loadMore");
+      $("shopTip").textContent = t("tip");
+
+      $("checkoutBtn").textContent = t("checkout");
+      $("clearBtn").textContent = t("clear");
+
+      $("enquiryTitle").textContent = t("enquiry");
+      $("enquiryLead").textContent = t("enquiryLead");
+      $("enquiryBtn").textContent = t("enquiryBtn");
+
+      $("aboutTitle").textContent = t("about");
+      $("locTitle").textContent = t("location");
+
+      $("checkoutTitle").textContent = t("checkout");
+      $("checkoutHint").textContent = t("requiredHint");
+      $("lblShopName").innerHTML = `${t("lblShop")} <span class="req">*</span>`;
+      $("lblName").innerHTML = `${t("lblName")} <span class="req">*</span>`;
+      $("lblPhone").innerHTML = `${t("lblPhone")} <span class="req">*</span>`;
+      $("lblAddr").textContent = t("lblAddr");
+      $("reviewBtn").textContent = t("reviewCart");
+      $("sendOrderBtn").textContent = t("sendOrder");
+      $("closeModalBtn").textContent = t("close");
+
+      $("tyTitle").textContent = t("thankYou");
+      $("tyLine1").textContent = t("tyLine1");
+      $("tyLine2").textContent = t("tyLine2");
+      $("tyBtn1").textContent = t("tyBtn1");
+      $("tyBtn2").textContent = t("tyBtn2");
+
+      $("brandTitle").textContent = CONFIG.SHOP_NAME;
+      $("kvShopV").textContent = CONFIG.SHOP_NAME;
+      $("kvOwnerV").textContent = CONFIG.OWNER_NAME;
+      $("kvPhoneV").textContent = CONFIG.ADMIN_PHONE;
+      $("kvAddrV").textContent = CONFIG.SHOP_ADDRESS;
+      $("brandSubtitle").textContent = "Sri Sri Tattva Products + Ayurvedic Supply | Patna";
+
+      $("aboutLine1").textContent = CONFIG.SHOP_NAME;
+      $("aboutLine2").textContent = CONFIG.ABOUT_TEXT;
+      $("aboutLine3").textContent = `Owner: ${CONFIG.OWNER_NAME} • Patna, Bihar`;
+
+      $("locLead").textContent = CONFIG.SHOP_ADDRESS;
+
+      $("langBtn").textContent = lang.toUpperCase();
+      updateCartBadge();
+    }
+
+    // ================== CATEGORY / FILTER / PAGINATION ==================
+    function rebuildCategorySelect(){
+      const sel = $("category");
+      const set = new Set(products.map(p => p.category).filter(Boolean));
+      const cats = Array.from(set).sort((a,b) => a.localeCompare(b));
+      const prev = sel.value || "all";
+      sel.innerHTML = "";
+      sel.appendChild(new Option("All Categories", "all"));
+      cats.forEach(c => sel.appendChild(new Option(c, c)));
+      sel.value = [...sel.options].some(o => o.value === prev) ? prev : "all";
+    }
+
+    function computeFiltered(){
+      const q = $("search").value.trim().toLowerCase();
+      const cat = $("category").value;
+      filtered = products.filter(p => {
+        const okCat = (cat === "all") ? true : p.category === cat;
+        const okQ = !q ? true : (
+          p.name.toLowerCase().includes(q) ||
+          (p.unit||"").toLowerCase().includes(q) ||
+          (p.category||"").toLowerCase().includes(q)
+        );
+        return okCat && okQ;
+      });
+      shown = 0;
+      $("productGrid").innerHTML = "";
+      loadMore();
+    }
+
+    function loadMore(){
+      const slice = filtered.slice(shown, shown + CONFIG.PAGE_SIZE);
+      slice.forEach(renderProductCard);
+      shown += slice.length;
+      $("loadMoreBtn").style.display = (shown < filtered.length) ? "inline-flex" : "none";
+    }
+
+    function renderProductCard(p){
+      const card = document.createElement("div");
+      card.className = "card";
+
+      const qty = cart.get(p.id) || 0;
+      const status = p.available
+        ? `<span class="statusOk">${t("available")}</span>`
+        : `<span class="statusNo">${t("notAvailable")}</span>`;
+
+      const price = fmtMoney(p.price) || "Ask price";
+      const mrp = fmtMoney(p.mrp);
+
+      card.innerHTML = `
+        <div class="row1">
+          <div class="pName">${escapeHtml(p.name)}</div>
+          ${status}
+        </div>
+        <div class="meta">Category: ${escapeHtml(p.category)} • Unit: ${escapeHtml(p.unit || "-")}</div>
+        <div class="price">${escapeHtml(price)}</div>
+        <div class="mrp">${mrp ? `MRP: ${escapeHtml(mrp)}` : ""}</div>
+        <div class="controls">
+          <button class="addBtn" type="button" ${p.available ? "" : "disabled"}>
+            + ${t("add")}
+          </button>
+          <span class="qtyPill">${t("qty")}: <b class="qtyNum">${qty}</b></span>
+        </div>
+        <div class="controls">
+          <a class="ghostBtn" target="_blank" href="${waLink(buildAskMessage(p))}">${t("ask")}</a>
+          <button class="ghostBtn" type="button" data-act="minus">-</button>
+        </div>
+      `;
+
+      const addBtn = card.querySelector(".addBtn");
+      const qtyEl = card.querySelector(".qtyNum");
+      const minusBtn = card.querySelector('[data-act="minus"]');
+
+      if (!p.available){
+        addBtn.classList.add("disabled");
+        minusBtn.classList.add("disabled");
+        minusBtn.disabled = true;
+      }
+
+      addBtn.addEventListener("click", () => {
+        addQty(p.id, 1);
+        qtyEl.textContent = String(cart.get(p.id) || 0);
+        pulse(addBtn);
+      });
+
+      minusBtn.addEventListener("click", () => {
+        addQty(p.id, -1);
+        qtyEl.textContent = String(cart.get(p.id) || 0);
+      });
+
+      $("productGrid").appendChild(card);
+    }
+
+    function pulse(el){
+      el.classList.remove("pulse");
+      void el.offsetWidth;
+      el.classList.add("pulse");
+    }
+
+    // ================== CART ==================
+    function addQty(id, delta){
+      const cur = cart.get(id) || 0;
+      const next = Math.max(0, cur + delta);
+      if (next === 0) cart.delete(id);
+      else cart.set(id, next);
+      updateCartBadge();
+    }
+
+    function getCartTotal(){
+      let total = 0;
+      for (const v of cart.values()) total += v;
+      return total;
+    }
+
+    function updateCartBadge(){
+      $("cartCount").textContent = String(getCartTotal());
+    }
+
+    function clearCart(){
+      cart.clear();
+      updateCartBadge();
+      computeFiltered();
+    }
+
+    function cartPreviewText(){
+      if (cart.size === 0) return t("cartEmpty");
+      const lines = [];
+      for (const [id, qty] of cart.entries()){
+        const p = products.find(x => x.id === id);
+        if (!p) continue;
+        lines.push(`- ${p.name} | ${p.unit || "-"} | Qty: ${qty}`);
+      }
+      return lines.join("\n");
+    }
+
+    // ================== WHATSAPP MESSAGES (NO MAP IN ORDER) ==================
+    function nowStamp(){
+      const d = new Date();
+      return d.toLocaleString();
+    }
+
+    function buildAskMessage(p){
+      const price = fmtMoney(p.price) || "Ask price";
+      const mrp = fmtMoney(p.mrp);
+      return [
+        `Hello, I want to enquire about:`,
+        `Product: ${p.name}`,
+        `Category: ${p.category}`,
+        `Unit: ${p.unit || "-"}`,
+        `Price: ${price}${mrp ? ` | MRP: ${mrp}` : ""}`,
+        ``,
+        `Please share availability/details.`
+      ].join("\n");
+    }
+
+    function buildOrderMessage(customer){
+      const lines = [];
+      lines.push(`Order for ${CONFIG.SHOP_NAME}`);
+      lines.push(`Date/Time: ${nowStamp()}`);
+      lines.push("");
+      lines.push("Customer Details:");
+      lines.push(`- Shop Name: ${customer.shopName}`);
+      lines.push(`- Name: ${customer.name}`);
+      lines.push(`- Phone: ${customer.phone}`);
+      if (customer.address) lines.push(`- Address: ${customer.address}`);
+      lines.push("");
+      lines.push("Order Items:");
+      for (const [id, qty] of cart.entries()){
+        const p = products.find(x => x.id === id);
+        if (!p) continue;
+        const price = fmtMoney(p.price) || "Ask price";
+        const mrp = fmtMoney(p.mrp);
+        lines.push(`- ${p.name} | ${p.unit || "-"} | Qty: ${qty} | Price: ${price}${mrp ? ` | MRP: ${mrp}` : ""}`);
+      }
+      lines.push("");
+      lines.push("Please confirm availability & total.");
+      return lines.join("\n");
+    }
+
+    // ================== CHECKOUT MODAL ==================
+    function openModal(){
+      $("modalBackdrop").style.display = "flex";
+      $("modalBackdrop").setAttribute("aria-hidden", "false");
+      $("cartPreview").textContent = "";
+    }
+    function closeModal(){
+      $("modalBackdrop").style.display = "none";
+      $("modalBackdrop").setAttribute("aria-hidden", "true");
+    }
+    function showThankYou(){
+      $("thankyou").style.display = "block";
+      location.hash = "#thankyou";
+    }
+
+    // ================== ADMIN GATE (CUSTOMER CANNOT EDIT) ==================
+    function getAdminState(){
+      try{ return JSON.parse(localStorage.getItem(CONFIG.STORAGE_ADMIN) || "{}"); }catch{ return {}; }
+    }
+    function setAdminState(st){
+      localStorage.setItem(CONFIG.STORAGE_ADMIN, JSON.stringify(st));
+    }
+    function isAdmin(){
+      const st = getAdminState();
+      return Boolean(st && st.ok === true);
+    }
+    function showAdminUI(){
+      const ok = isAdmin();
+      $("adminLogoutBtn").style.display = ok ? "inline-flex" : "none";
+      $("addRowBtn").style.display = ok ? "inline-flex" : "none";
+      $("saveBtn").style.display = ok ? "inline-flex" : "none";
+      $("resetBtn").style.display = ok ? "inline-flex" : "none";
+      $("adminArea").style.display = ok ? "block" : "none";
+      $("adminNav").style.display = ok ? "inline-flex" : "none"; // admin link only for admin
+    }
+    function adminLoginFlow(){
+      $("adminGate").style.display = "block";
+    }
+    function adminContinue(){
+      const phone = String($("adminPhoneInput").value || "").replace(/\D/g,"");
+      const pin = String($("adminPinInput").value || "").trim();
+
+      if (phone !== CONFIG.ADMIN_PHONE){
+        alert("Admin phone not matched.");
+        return;
+      }
+      if (pin !== CONFIG.DEFAULT_ADMIN_PIN){
+        alert("Wrong PIN.");
+        return;
+      }
+
+      setAdminState({ ok:true, phone });
+      $("adminGate").style.display = "none";
+      showAdminUI();
+      renderAdminTable();
+    }
+
+    function adminLogout(){
+      const st = getAdminState();
+      setAdminState({ ok:false, phone: st.phone || "", pin: st.pin || "" });
+      $("adminArea").style.display = "none";
+      showAdminUI();
+      alert("Logged out.");
+    }
+
+    function renderAdminTable(){
+      const tb = $("adminTbody");
+      tb.innerHTML = "";
+      products.forEach((p, idx) => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td><input data-i="${idx}" data-k="category" value="${escapeHtml(p.category)}"></td>
+          <td class="tdWide"><input data-i="${idx}" data-k="name" value="${escapeHtml(p.name)}"></td>
+          <td><input data-i="${idx}" data-k="unit" value="${escapeHtml(p.unit)}"></td>
+          <td class="tdTiny"><input data-i="${idx}" data-k="price" value="${escapeHtml(String(p.price||0))}"></td>
+          <td class="tdTiny"><input data-i="${idx}" data-k="mrp" value="${escapeHtml(String(p.mrp||0))}"></td>
+          <td class="tdTiny">
+            <select data-i="${idx}" data-k="available">
+              <option value="true"${p.available ? " selected":""}>Yes</option>
+              <option value="false"${!p.available ? " selected":""}>No</option>
+            </select>
+          </td>
+          <td>
+            <div class="rowBtns">
+              <button class="btn" type="button" data-act="dup" data-i="${idx}">Duplicate</button>
+              <button class="btn danger" type="button" data-act="del" data-i="${idx}">Delete</button>
+            </div>
+          </td>
+        `;
+        tb.appendChild(tr);
+      });
+    }
+
+    function applyAdminEdits(){
+      const els = $("adminTbody").querySelectorAll("input,select");
+      els.forEach(el => {
+        const i = Number(el.getAttribute("data-i"));
+        const k = el.getAttribute("data-k");
+        if (!products[i]) return;
+
+        if (k === "available"){
+          products[i].available = (el.value === "true");
+          return;
+        }
+        const v = String(el.value || "").trim();
+        if (k === "price" || k === "mrp"){
+          const n = Number(v.replace(/[^\d.]/g,""));
+          products[i][k] = Number.isFinite(n) ? n : 0;
+        }else{
+          products[i][k] = v;
+        }
+      });
+      products = products.filter(p => p.name && p.name.trim());
+    }
+
+    function addAdminRow(){
+      products.unshift({ id: uid(), category: "Food", name: "New Product", unit: "", price: 0, mrp: 0, available: true });
+      renderAdminTable();
+      rebuildCategorySelect();
+      computeFiltered();
+    }
+
+    function adminDelete(i){
+      products.splice(i,1);
+      renderAdminTable();
+      rebuildCategorySelect();
+      computeFiltered();
+    }
+    function adminDup(i){
+      const p = products[i];
+      products.splice(i+1, 0, { ...p, id: uid() });
+      renderAdminTable();
+      rebuildCategorySelect();
+      computeFiltered();
+    }
+
+    // ================== IMPORT/EXPORT ==================
+    function importFromPaste(text){
+      const lines = text.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+      const imported = [];
+      for (const line of lines){
+        const parts = line.includes("\t") ? line.split("\t") : line.split(/\s{2,}/);
+        const cleaned = parts.map(x => x.trim()).filter(Boolean);
+        if (cleaned.length < 3) continue;
+
+        const cat = cleaned[0] || "Other";
+        const name = cleaned[1] || "";
+        const unit = cleaned[2] || "";
+        const priceRaw = cleaned[3] || "";
+        const mrpRaw = cleaned[4] || "";
+        const availRaw = cleaned[5] || "";
+
+        const price = Number(String(priceRaw).replace(/[^\d.]/g,"")) || 0;
+        const mrp = Number(String(mrpRaw).replace(/[^\d.]/g,"")) || 0;
+        const available = availRaw ? !/no|not|false|0/i.test(availRaw) : true;
+
+        if (name){
+          imported.push({ id: uid(), category: cat, name, unit, price, mrp, available });
+        }
+      }
+      if (!imported.length){
+        alert("Import failed. Paste in: Category  Product  Unit  Price  (optional MRP) (optional Available)");
+        return;
+      }
+      products = imported;
+      saveProducts();
+      rebuildCategorySelect();
+      computeFiltered();
+      renderAdminTable();
+      alert("Imported successfully.");
+    }
+
+    function exportJson(){
+      const json = JSON.stringify(products, null, 2);
+      $("importText").value = json;
+      $("importText").focus();
+      $("importText").select();
+      document.execCommand("copy");
+      alert("Exported JSON copied to clipboard (and shown in the box).");
+    }
+
+    function importJson(){
+      const raw = $("importText").value.trim();
+      if (!raw){ alert("Paste JSON first."); return; }
+      try{
+        const arr = JSON.parse(raw);
+        if (!Array.isArray(arr)) throw new Error("not array");
+        products = arr.map(p => ({
+          id: String(p.id || uid()),
+          category: String(p.category || "Other").trim() || "Other",
+          name: String(p.name || "").trim(),
+          unit: String(p.unit || "").trim(),
+          price: Number(p.price) || 0,
+          mrp: Number(p.mrp) || 0,
+          available: Boolean(p.available),
+        })).filter(p => p.name);
+        saveProducts();
+        rebuildCategorySelect();
+        computeFiltered();
+        renderAdminTable();
+        alert("JSON imported.");
+      }catch{
+        alert("Invalid JSON.");
+      }
+    }
+
+    // ================== STATIC LINKS ==================
+    function initStatic(){
+      $("heroBtn2").href = "tel:+917488307988";
+      $("heroBtn2").textContent = "Call: 7488307988";
+      $("heroBtn3").href = CONFIG.MAPS_LINK;
+
+      $("locBtn1").href = CONFIG.MAPS_LINK;
+      $("locBtn2").href = "tel:+917488307988";
+      $("locBtn2").textContent = "Call: 7488307988";
+
+      $("enquiryCallBtn").href = "tel:+917488307988";
+      $("enquiryCallBtn").textContent = "Call: 7488307988";
+
+      $("enquiryBtn").href = waLink(
+        `Hello, I want to enquire about products.\n\nName:\nPhone:\nRequirement:\n`
+      );
+
+      $("year").textContent = new Date().getFullYear();
+    }
+
+    // ================== EVENTS ==================
+    function setupEvents(){
+      $("search").addEventListener("input", computeFiltered);
+      $("category").addEventListener("change", computeFiltered);
+      $("loadMoreBtn").addEventListener("click", loadMore);
+
+      $("clearBtn").addEventListener("click", clearCart);
+
+      $("checkoutBtn").addEventListener("click", () => {
+        if (cart.size === 0){ alert(t("cartEmpty")); return; }
+        openModal();
+      });
+
+      $("closeModalBtn").addEventListener("click", closeModal);
+      $("modalBackdrop").addEventListener("click", (e) => {
+        if (e.target === $("modalBackdrop")) closeModal();
+      });
+
+      $("reviewBtn").addEventListener("click", () => {
+        $("cartPreview").textContent = cartPreviewText();
+      });
+
+      $("checkoutForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (cart.size === 0){ alert(t("cartEmpty")); return; }
+
+        const shopName = $("custShop").value.trim();
+        const name = $("custName").value.trim();
+        const phone = $("custPhone").value.trim();
+        const address = $("custAddr").value.trim();
+
+        if (!shopName || !name || !phone){
+          alert(t("mustFill"));
+          return;
+        }
+
+        const msg = buildOrderMessage({ shopName, name, phone, address });
+        window.open(waLink(msg), "_blank");
+        closeModal();
+        showThankYou();
+      });
+
+      $("langBtn").addEventListener("click", () => {
+        lang = (lang === "en") ? "hi" : "en";
+        applyText();
+        computeFiltered();
+      });
+
+      $("themeBtn").addEventListener("click", () => {
+        const cur = document.documentElement.getAttribute("data-theme") || "light";
+        const next = cur === "light" ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", next);
+        $("themeBtn").textContent = (next === "light") ? "Light" : "Dark";
+      });
+
+      // Admin
+      $("adminLoginBtn").addEventListener("click", adminLoginFlow);
+      $("adminGateBtn").addEventListener("click", adminContinue);
+      $("adminLogoutBtn").addEventListener("click", adminLogout);
+      $("addRowBtn").addEventListener("click", addAdminRow);
+
+      $("adminTbody").addEventListener("input", () => {
+        applyAdminEdits();
+        rebuildCategorySelect();
+        computeFiltered();
+      });
+
+      $("adminTbody").addEventListener("click", (e) => {
+        const btn = e.target.closest("button");
+        if (!btn) return;
+        const act = btn.getAttribute("data-act");
+        const i = Number(btn.getAttribute("data-i"));
+        if (!Number.isFinite(i)) return;
+        if (act === "del") adminDelete(i);
+        if (act === "dup") adminDup(i);
+      });
+
+      $("saveBtn").addEventListener("click", () => {
+        applyAdminEdits();
+        saveProducts();
+        rebuildCategorySelect();
+        computeFiltered();
+        renderAdminTable();
+        alert("Saved.");
+      });
+
+      $("resetBtn").addEventListener("click", () => {
+        if (!confirm("Reset to default products?")) return;
+        products = structuredClone(DEFAULT_PRODUCTS);
+        saveProducts();
+        rebuildCategorySelect();
+        computeFiltered();
+        renderAdminTable();
+      });
+
+      $("importBtn").addEventListener("click", () => importFromPaste($("importText").value || ""));
+      $("exportBtn").addEventListener("click", exportJson);
+      $("importJsonBtn").addEventListener("click", importJson);
+    }
+
+    // ================== STARTUP ==================
+    document.addEventListener("DOMContentLoaded", () => {
+      document.documentElement.setAttribute("data-theme", "light");
+      $("themeBtn").textContent = "Light";
+
+      lang = CONFIG.DEFAULT_LANGUAGE;
+
+      initStatic();
+      rebuildCategorySelect();
+      applyText();
+      computeFiltered();
+
+      showAdminUI();
+      if (isAdmin()){
+        renderAdminTable();
+      }
+
+      setupEvents();
+    });
+  </script>
+</body>
+</html>
